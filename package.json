@@ -1,0 +1,29 @@
+{
+  "name": "@absolute-web/vsf-cache",
+  "version": "2.3.4",
+  "license": "MIT",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "rimraf lib && rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest",
+    "prepublish": "yarn build"
+  },
+  "dependencies": {
+    "@nuxtjs/composition-api": "0.17.0",
+    "@vue-storefront/core": "^2.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib/**/*",
+    "defaultHandler/**/*",
+    "nuxt/**/*"
+  ]
+}
